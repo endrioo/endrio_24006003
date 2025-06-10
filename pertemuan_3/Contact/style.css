@@ -64,6 +64,10 @@ header {
     line-height: 1.6;
 }
 
+.contact-list {
+    margin-bottom: 20px;
+}
+
 .contact-list span {
     background-color: black;
     color: white;
