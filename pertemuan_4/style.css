@@ -1,163 +1,163 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    background-color: #0077cc;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #0077cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 nav {
-    background-color: #005fa3;
+  background-color: #005fa3;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav li {
-    margin: 10px;
+  margin: 10px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 
 nav a:hover {
-    background-color: #003f6b;
+  background-color: #003f6b;
 }
 
 .container {
-    display: flex;
-    flex: 1;
-    padding: 20px;
-    gap: 20px;
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
 }
 
 /* Sidebar */
 aside {
-    width: 200px;
-    background-color: #e2e2e2;
-    padding: 20px;
-    flex-shrink: 0;
+  width: 200px;
+  background-color: #e2e2e2;
+  padding: 20px;
+  flex-shrink: 0;
 }
 
 aside h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 aside ul {
-    list-style: none;
+  list-style: none;
 }
 
 aside li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 aside a {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
 
 main {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
 }
 
 .products {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
 .product {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    max-width: 400px;
-    margin-right: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  max-width: 400px;
+  margin-right: 20px;
 }
 
 .product img {
-    width: 100%;
-    border-radius: 4px;
+  width: 100%;
+  border-radius: 4px;
 }
 
 .product h3 {
-    margin: 10px 0 5px;
+  margin: 10px 0 5px;
 }
 
 .product p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .product button {
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .product button:hover {
-    background-color: #005fa3;
+  background-color: #005fa3;
 }
 
 form {
-    margin-top: 30px;
-    max-width: 500px;
+  margin-top: 30px;
+  max-width: 500px;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 input[type="submit"] {
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #005fa3;
+  background-color: #005fa3;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
