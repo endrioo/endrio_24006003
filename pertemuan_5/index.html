@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Table & Slideshow</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .slideshow-container {
+        max-width: 600px;
+        margin: 20px auto;
+        position: relative;
+        text-align: center;
+      }
+
+      .slides {
+        display: none;
+        width: 100%;
+      }
+
+      .slide-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 0;
+      }
+
+      .next {
+        right: 0;
+      }
+
+      .color-button,
+      .utility-button {
+        margin: 5px;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      #clock {
+        text-align: center;
+        font-size: 18px;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      .dark-mode {
+        background-color: #121212;
+        color: white;
+      }
+
+      .dark-mode table,
+      .dark-mode th,
+      .dark-mode td {
+        border-color: white;
+      }
+
+      .dark-mode tr:hover {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Table with Slideshow and Features</h1>
+
+    <!-- Live Clock -->
+    <div id="clock"></div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <img
+        class="slides"
+        src="https://picsum.photos/id/4/367/267"
+        alt="Slide 1"
+      />
+      <img
+        class="slides"
+        src="https://picsum.photos/id/8/367/267"
+        alt="Slide 2"
+      />
+      <img
+        class="slides"
+        src="https://picsum.photos/id/14/367/267"
+        alt="Slide 3"
+      />
+      <button class="slide-button prev" onclick="changeSlide(-1)">❮</button>
+      <button class="slide-button next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <!-- Color and Utility Buttons -->
+    <div>
+      <button
+        class="color-button"
+        style="background-color: lightblue"
+        onclick="changeColor('lightblue')"
+      >
+        Light Blue
+      </button>
+      <button
+        class="color-button"
+        style="background-color: lightgreen"
+        onclick="changeColor('lightgreen')"
+      >
+        Light Green
+      </button>
+      <button
+        class="color-button"
+        style="background-color: lightyellow"
+        onclick="changeColor('lightyellow')"
+      >
+        Light Yellow
+      </button>
+      <button
+        class="color-button"
+        style="background-color: lightpink"
+        onclick="changeColor('lightpink')"
+      >
+        Light Pink
+      </button>
+      <button
+        class="color-button"
+        style="background-color: lavender"
+        onclick="changeColor('lavender')"
+      >
+        Lavender
+      </button>
+      <button
+        class="color-button"
+        style="background-color: peachpuff"
+        onclick="changeColor('peachpuff')"
+      >
+        Peach Puff
+      </button>
+      <button
+        class="color-button"
+        style="background-color: mistyrose"
+        onclick="changeColor('mistyrose')"
+      >
+        Misty Rose
+      </button>
+      <button
+        class="color-button"
+        style="background-color: honeydew"
+        onclick="changeColor('honeydew')"
+      >
+        Honeydew
+      </button>
+      <button
+        class="color-button"
+        style="background-color: thistle"
+        onclick="changeColor('thistle')"
+      >
+        Thistle
+      </button>
+      <button
+        class="color-button"
+        style="background-color: lightcyan"
+        onclick="changeColor('lightcyan')"
+      >
+        Light Cyan
+      </button>
+      <button class="utility-button" onclick="resetColor()">
+        Reset Background
+      </button>
+      <button class="utility-button" onclick="toggleDarkMode()">
+        Toggle Dark/Light Mode
+      </button>
+    </div>
+
+    <!-- Table -->
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Header 1 ▲</th>
+          <th onclick="sortTable(1)">Header 2 ▲</th>
+          <th onclick="sortTable(2)">Header 3 ▲</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Banana</td>
+          <td>5</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>3</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Cherry</td>
+          <td>8</td>
+          <td>B</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- JavaScript -->
+    <script>
+      // Feature 1: Change table background
+      function changeColor(color) {
+        document.getElementById("myTable").style.backgroundColor = color;
+      }
+
+      // Feature 2: Reset table background
+      function resetColor() {
+        document.getElementById("myTable").style.backgroundColor = "";
+      }
+
+      // Feature 3: Slideshow
+      let slideIndex = 0;
+      const slides = document.getElementsByClassName("slides");
+
+      function showSlide(index) {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[index].style.display = "block";
+      }
+
+      function changeSlide(n) {
+        slideIndex = (slideIndex + n + slides.length) % slides.length;
+        showSlide(slideIndex);
+      }
+
+      function autoSlide() {
+        changeSlide(1);
+        setTimeout(autoSlide, 5000);
+      }
+
+      showSlide(slideIndex);
+      autoSlide();
+
+      // Feature 4: Live Clock
+      function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        document.getElementById("clock").textContent =
+          "Current Time: " + timeString;
+        setTimeout(updateClock, 1000);
+      }
+      updateClock();
+
+      // Feature 5: Dark/Light Mode
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+
+      // Bonus: Table Sorting
+      function sortTable(colIndex) {
+        const table = document.getElementById("myTable");
+        let rows, switching, i, x, y, shouldSwitch;
+        switching = true;
+        while (switching) {
+          switching = false;
+          rows = table.rows;
+          for (i = 1; i < rows.length - 1; i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[colIndex];
+            y = rows[i + 1].getElementsByTagName("TD")[colIndex];
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+          if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
