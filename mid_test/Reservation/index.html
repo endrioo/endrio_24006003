@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warung Nusantara</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h3>WNusantara</h3>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a href="../HomePage/index.html" class="nav-link">Home</a>
+          </li>
+          <li><a href="../About/index.html" class="nav-link">About</a></li>
+          <li>
+            <a href="../Location/index.html" class="nav-link">Location</a>
+          </li>
+          <li><a href="../Reviews/index.html" class="nav-link">Reviews</a></li>
+          <li>
+            <a href="#reservations" class="nav-link active">Reservations</a>
+          </li>
+          <li><a href="../Contact/index.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="reservations">
+      <div class="container">
+        <h2>Make a Reservation</h2>
+        <form class="reservation-form">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Email Address" required />
+          </div>
+          <div class="form-row">
+            <input type="tel" placeholder="Phone Number" required />
+            <select required>
+              <option value="">Number of Guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5+">5+ Guests</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <input type="date" required />
+            <input type="time" required />
+          </div>
+          <textarea placeholder="Special Requests (Optional)"></textarea>
+          <button type="submit" class="btn-primary">Book Table</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Warung Nusantara</h3>
+            <p>Authentic Indonesian cuisine since 1995</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="../HomePage/index.html">Home</a></li>
+              <li><a href="../Menu/index.html">Menu</a></li>
+              <li><a href="../About/index.html">About</a></li>
+              <li><a href="../Contact/index.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Warung Nusantara. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
