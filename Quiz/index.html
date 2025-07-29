@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offshore Directwriters - Business Consulting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 120px 0 80px;
+            margin-top: 80px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #fff;
+            color: #e74c3c;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #f8f8f8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #e74c3c;
+        }
+
+        .reasons {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .reason-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .reason-icon {
+            width: 60px;
+            height: 60px;
+            background: #e74c3c;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .reason-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .reason-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: #f8f9fa;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: #e74c3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .service-content h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .service-content p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .news-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .news-image {
+            width: 80px;
+            height: 60px;
+            background: #ddd;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .news-content h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .news-content p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .testimonials {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            background: #e74c3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .testimonial-info h4 {
+            margin-bottom: 0.25rem;
+            color: #333;
+        }
+
+        .testimonial-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-text {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .reasons-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🏢 OFFSHORE DIRECTWRITERS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="contact-info">
+                📞 +1-800-555-0123 | 📧 info@example.com
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>We Help Entrepreneurs Achieve Their Goals</h1>
+                    <p>We provide comprehensive business consulting services to help you navigate challenges and achieve sustainable growth in today's competitive market.</p>
+                    <a href="#contact" class="btn">Get Started Today</a>
+                    <a href="#services" class="btn btn-outline">Our Services</a>
+                </div>
+                <div class="hero-image">
+                    <div style="width: 300px; height: 200px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        👩‍💼 Professional Image
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reasons">
+        <div class="container">
+            <h2 class="section-title">Six Good Reasons to Choose</h2>
+            <p class="section-subtitle">We provide exceptional consulting services with proven track record and professional expertise to ensure your business success.</p>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">🏆</div>
+                    <h3>Accountability</h3>
+                    <p>We take full responsibility for our recommendations and work closely with you to ensure successful implementation.</p>
+                    <a href="#" class="btn btn-small">Read More</a>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">⚡</div>
+                    <h3>Competitive Pricing Policy</h3>
+                    <p>Our pricing structure is transparent and competitive, offering excellent value for professional consulting services.</p>
+                    <a href="#" class="btn btn-small">Read More</a>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">🎯</div>
+                    <h3>Offshore Business Reports</h3>
+                    <p>Comprehensive market analysis and business intelligence reports to guide your strategic decisions.</p>
+                    <a href="#" class="btn btn-small">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            
+            <div class="services-grid">
+                <div>
+                    <div class="service-item">
+                        <div class="service-icon">📊</div>
+                        <div class="service-content">
+                            <h4>Accounting / Auditing</h4>
+                            <p>Professional accounting services and comprehensive auditing solutions for your business needs.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">💼</div>
+                        <div class="service-content">
+                            <h4>Bank Account Opening</h4>
+                            <p>Assistance with opening business bank accounts and managing financial relationships.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🏢</div>
+                        <div class="service-content">
+                            <h4>Virtual Office</h4>
+                            <p>Professional virtual office solutions including mail handling and business address services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="service-item">
+                        <div class="service-icon">🏛️</div>
+                        <div class="service-content">
+                            <h4>Company Transfer</h4>
+                            <p>Seamless company transfer services and ownership transition management.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📋</div>
+                        <div class="service-content">
+                            <h4>Shelf Registration</h4>
+                            <p>Ready-made company solutions and shelf registration services for quick business setup.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🔐</div>
+                        <div class="service-content">
+                            <h4>Virtual Security</h4>
+                            <p>Comprehensive digital security solutions to protect your business assets and data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <h3>Latest News</h3>
+                <div class="news-item">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h4>Be More Balanced</h4>
+                        <p>Tips for maintaining work-life balance while growing your business effectively.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <h4>Changes in UAE</h4>
+                        <p>Recent regulatory changes affecting business operations in the UAE market.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Our Clients Say</h2>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">JS</div>
+                    <div class="testimonial-info">
+                        <h4>John Smith</h4>
+                        <p>CEO, Tech Solutions Inc.</p>
+                    </div>
+                </div>
+                <div class="testimonial-text">
+                    "The professional consulting services provided were exceptional. The team's expertise and dedication helped us navigate complex business challenges and achieve remarkable growth. I highly recommend their services to any business looking for strategic guidance."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Offshore Directwriters. All rights reserved. | Professional Business Consulting Services</p>
+        </div>
+    </footer>
+</body>
+</html>
