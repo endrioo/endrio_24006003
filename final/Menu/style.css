@@ -30,11 +30,21 @@ body {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
+}
+
+.nav-logo {
+  margin-left: 20px;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  margin-right: 20px;
 }
 
 .nav-logo h3 {
@@ -49,6 +59,8 @@ body {
   display: flex;
   list-style: none;
   gap: 30px;
+  background-color: white;
+  padding: 20px;
 }
 
 .nav-link {
@@ -60,7 +72,7 @@ body {
 }
 
 .nav-link:hover,
-.nav-link.active {
+.nav-link.actived {
   color: #ef4444;
 }
 
@@ -76,33 +88,13 @@ body {
 }
 
 .nav-link:hover::after,
-.nav-link.active::after {
+.nav-link.actived::after {
   width: 100%;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 50px;
-  position: relative;
-}
-
-h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: #ef4444;
 }
 
 /* Featured Menu */
 .featured-menu {
-  margin: 80px 0;
+  margin: 112px 0;
 }
 
 .dishes-grid {
