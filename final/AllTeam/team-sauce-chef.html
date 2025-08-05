@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warung Nusantara</title>
+    <title>Menu</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -36,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto nav-menu">
             <li class="nav-item">
-              <a href="../HomePage/index.html" class="nav-link">Home</a>
+              <a href="../HomePage/index.html" class="nav-link actived">Home</a>
             </li>
             <li class="nav-item">
-              <a href="../About/index.html" class="nav-link">About</a>
+              <a href="../About/index.html" class="nav-link"> About </a>
             </li>
             <li class="nav-item">
-              <a href="#location" class="nav-link actived">Location</a>
+              <a href="../Location/index.html" class="nav-link">Location</a>
             </li>
             <li class="nav-item">
               <a href="../Reviews/index.html" class="nav-link">Reviews</a>
@@ -60,38 +60,45 @@
       </div>
     </nav>
 
-    <!-- Location Section -->
-    <section id="location" class="location">
-      <div class="container">
-        <h2>Find Us</h2>
-        <div class="location-content">
-          <div class="location-info">
-            <h3>Our Location</h3>
-            <p>
-              📍 Jl. Merdeka No. 123<br />
-              Medan, North Sumatra 20111<br />
-              Indonesia
-            </p>
-            <p>
-              📞 Phone: +62 61 123-4567<br />
-              📧 Email: info@warungnusantara.com
-            </p>
-            <div class="hours">
-              <h4>Opening Hours</h4>
-              <p>Monday - Sunday: 10:00 AM - 10:00 PM</p>
-            </div>
+    <!-- Team Detail -->
+    <div class="team-container">
+      <img
+        src="https://www.escoffier.edu/wp-content/uploads/2023/11/Escoffier-graduate-Trenin-Nubiru-stands-proudly-smiling-in-an-Escoffier-kitchen-768.jpg"
+        alt="Sous Chef"
+        class="member-photo"
+      />
+
+      <div class="team-details">
+        <h1>Ahmad Rahman</h1>
+        <p>
+          Ahmad Rahman serves as our Sous Chef, bringing energy, creativity, and
+          precision to the kitchen. As the right hand to the Head Chef, Ahmad
+          coordinates daily kitchen operations, mentors junior chefs, and
+          ensures that every dish is prepared to perfection. His passion for
+          local ingredients and modern techniques makes him a key asset to our
+          culinary team.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <strong>Position:</strong><br />
+            Sous Chef
           </div>
-          <!-- <div class="map-placeholder">
-            <div class="map-placeholder-text">Interactive Map Placeholder</div>
-          </div> -->
-          <img
-            src="https://i.wpimg.pl/1280x/filerepo.grupawp.pl/api/v1/display/embed/eb2694f5-9bf5-487c-a918-79ce6d7246a7"
-            alt="maps"
-            class="map-placeholder"
-          />
+          <div class="info-item">
+            <strong>Experience:</strong><br />
+            8+ years
+          </div>
+          <div class="info-item">
+            <strong>Specialty:</strong><br />
+            Plating & Contemporary Indonesian Cuisine
+          </div>
+          <div class="info-item">
+            <strong>Favorite Dish:</strong><br />
+            Ayam Betutu
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -126,6 +133,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

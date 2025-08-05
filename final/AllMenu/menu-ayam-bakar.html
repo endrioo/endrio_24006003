@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warung Nusantara</title>
+    <title>Menu</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -36,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto nav-menu">
             <li class="nav-item">
-              <a href="../HomePage/index.html" class="nav-link">Home</a>
+              <a href="../HomePage/index.html" class="nav-link actived">Home</a>
             </li>
             <li class="nav-item">
-              <a href="../About/index.html" class="nav-link">About</a>
+              <a href="../About/index.html" class="nav-link"> About </a>
             </li>
             <li class="nav-item">
-              <a href="#location" class="nav-link actived">Location</a>
+              <a href="../Location/index.html" class="nav-link">Location</a>
             </li>
             <li class="nav-item">
               <a href="../Reviews/index.html" class="nav-link">Reviews</a>
@@ -60,38 +60,47 @@
       </div>
     </nav>
 
-    <!-- Location Section -->
-    <section id="location" class="location">
-      <div class="container">
-        <h2>Find Us</h2>
-        <div class="location-content">
-          <div class="location-info">
-            <h3>Our Location</h3>
-            <p>
-              📍 Jl. Merdeka No. 123<br />
-              Medan, North Sumatra 20111<br />
-              Indonesia
-            </p>
-            <p>
-              📞 Phone: +62 61 123-4567<br />
-              📧 Email: info@warungnusantara.com
-            </p>
-            <div class="hours">
-              <h4>Opening Hours</h4>
-              <p>Monday - Sunday: 10:00 AM - 10:00 PM</p>
-            </div>
+    <!-- Menu Detail -->
+    <div class="menu-container">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLTLr0PwqquOnBKnn3jZRzbNcqfbIYCg4iAw&s"
+        alt="Ayam Bakar"
+        class="menu-image"
+      />
+
+      <div class="menu-details">
+        <h1>Ayam Bakar</h1>
+        <p>
+          Ayam Bakar is a traditional Indonesian grilled chicken dish that's
+          marinated in a rich blend of spices and sweet soy sauce (kecap manis),
+          then slowly grilled until tender and slightly charred. It’s typically
+          served with steamed rice, sambal, cucumber slices, and fresh herbs,
+          making it a flavorful and hearty meal.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <strong>Ingredients:</strong><br />
+            Chicken, garlic, shallots, coriander, turmeric, sweet soy sauce
+            (kecap manis), lime, coconut oil, chili
           </div>
-          <!-- <div class="map-placeholder">
-            <div class="map-placeholder-text">Interactive Map Placeholder</div>
-          </div> -->
-          <img
-            src="https://i.wpimg.pl/1280x/filerepo.grupawp.pl/api/v1/display/embed/eb2694f5-9bf5-487c-a918-79ce6d7246a7"
-            alt="maps"
-            class="map-placeholder"
-          />
+          <div class="info-item">
+            <strong>Serving Size:</strong><br />
+            1 leg quarter + rice (approx. 350g)
+          </div>
+          <div class="info-item">
+            <strong>Spice Level:</strong><br />
+            🌶️🌶️ Medium
+          </div>
+          <div class="info-item">
+            <strong>Calories:</strong><br />
+            Approx. 550 kcal
+          </div>
         </div>
+
+        <div class="price">Rp 38,000</div>
       </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -126,6 +135,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warung Nusantara</title>
+    <title>Menu</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -36,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto nav-menu">
             <li class="nav-item">
-              <a href="../HomePage/index.html" class="nav-link">Home</a>
+              <a href="../HomePage/index.html" class="nav-link actived">Home</a>
             </li>
             <li class="nav-item">
-              <a href="../About/index.html" class="nav-link">About</a>
+              <a href="../About/index.html" class="nav-link"> About </a>
             </li>
             <li class="nav-item">
-              <a href="#location" class="nav-link actived">Location</a>
+              <a href="../Location/index.html" class="nav-link">Location</a>
             </li>
             <li class="nav-item">
               <a href="../Reviews/index.html" class="nav-link">Reviews</a>
@@ -60,38 +60,43 @@
       </div>
     </nav>
 
-    <!-- Location Section -->
-    <section id="location" class="location">
-      <div class="container">
-        <h2>Find Us</h2>
-        <div class="location-content">
-          <div class="location-info">
-            <h3>Our Location</h3>
-            <p>
-              📍 Jl. Merdeka No. 123<br />
-              Medan, North Sumatra 20111<br />
-              Indonesia
-            </p>
-            <p>
-              📞 Phone: +62 61 123-4567<br />
-              📧 Email: info@warungnusantara.com
-            </p>
-            <div class="hours">
-              <h4>Opening Hours</h4>
-              <p>Monday - Sunday: 10:00 AM - 10:00 PM</p>
-            </div>
+    <!-- Menu Detail -->
+    <div class="menu-container">
+      <img
+        src="https://cdn0-production-images-kly.akamaized.net/4GSQEBUKKiYO2_xpfjbkE7lKNds=/0x120:3000x1811/680x383/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3282059/original/075075700_1604028408-shutterstock_1788721670.jpg"
+        alt="Rendang Daging"
+        class="menu-image"
+      />
+
+      <div class="menu-details">
+        <h1>Rendang Daging</h1>
+        <p>
+          Rendang is a legendary Indonesian dish from the Minangkabau ethnic
+          group of West Sumatra. Made by slow-cooking beef in coconut milk and a
+          fragrant mix of lemongrass, garlic, turmeric, ginger, and chilies,
+          this dish is rich, tender, and full of depth. The result is a deeply
+          caramelized, spicy meat that melts in your mouth.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <strong>Ingredients:</strong><br />Beef, coconut milk, lemongrass,
+            garlic, shallots, galangal, ginger, turmeric, red chilies
           </div>
-          <!-- <div class="map-placeholder">
-            <div class="map-placeholder-text">Interactive Map Placeholder</div>
-          </div> -->
-          <img
-            src="https://i.wpimg.pl/1280x/filerepo.grupawp.pl/api/v1/display/embed/eb2694f5-9bf5-487c-a918-79ce6d7246a7"
-            alt="maps"
-            class="map-placeholder"
-          />
+          <div class="info-item">
+            <strong>Serving Size:</strong><br />1 portion (approx. 250g)
+          </div>
+          <div class="info-item">
+            <strong>Spice Level:</strong><br />🌶️🌶️🌶️ Medium-High
+          </div>
+          <div class="info-item">
+            <strong>Calories:</strong><br />Approx. 450 kcal
+          </div>
         </div>
+
+        <div class="price">Rp 45,000</div>
       </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -126,6 +131,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

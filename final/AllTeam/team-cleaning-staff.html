@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warung Nusantara</title>
+    <title>Menu</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -36,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto nav-menu">
             <li class="nav-item">
-              <a href="../HomePage/index.html" class="nav-link">Home</a>
+              <a href="../HomePage/index.html" class="nav-link actived">Home</a>
             </li>
             <li class="nav-item">
-              <a href="../About/index.html" class="nav-link">About</a>
+              <a href="../About/index.html" class="nav-link"> About </a>
             </li>
             <li class="nav-item">
-              <a href="#location" class="nav-link actived">Location</a>
+              <a href="../Location/index.html" class="nav-link">Location</a>
             </li>
             <li class="nav-item">
               <a href="../Reviews/index.html" class="nav-link">Reviews</a>
@@ -60,38 +60,44 @@
       </div>
     </nav>
 
-    <!-- Location Section -->
-    <section id="location" class="location">
-      <div class="container">
-        <h2>Find Us</h2>
-        <div class="location-content">
-          <div class="location-info">
-            <h3>Our Location</h3>
-            <p>
-              📍 Jl. Merdeka No. 123<br />
-              Medan, North Sumatra 20111<br />
-              Indonesia
-            </p>
-            <p>
-              📞 Phone: +62 61 123-4567<br />
-              📧 Email: info@warungnusantara.com
-            </p>
-            <div class="hours">
-              <h4>Opening Hours</h4>
-              <p>Monday - Sunday: 10:00 AM - 10:00 PM</p>
-            </div>
+    <!-- Team Detail -->
+    <div class="team-container">
+      <img
+        src="https://media.istockphoto.com/id/1355237717/photo/shot-of-a-young-woman-disinfecting-the-tables-while-working-in-a-restaurant.jpg?s=612x612&w=0&k=20&c=3FSZ8LLxY9i1QDy3GQGW1YehSUnI-GO-WMieM8kUdDc="
+        alt="Cleaning Staff"
+        class="member-photo"
+      />
+
+      <div class="team-details">
+        <h1>Rina Ayu</h1>
+        <p>
+          Rina Ayu is our dedicated Cleaning Staff member who ensures the
+          restaurant remains spotless and welcoming. With great attention to
+          hygiene and a strong work ethic, she plays a vital behind-the-scenes
+          role in maintaining a safe and pleasant environment for both guests
+          and staff.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <strong>Position:</strong><br />
+            Cleaning Staff
           </div>
-          <!-- <div class="map-placeholder">
-            <div class="map-placeholder-text">Interactive Map Placeholder</div>
-          </div> -->
-          <img
-            src="https://i.wpimg.pl/1280x/filerepo.grupawp.pl/api/v1/display/embed/eb2694f5-9bf5-487c-a918-79ce6d7246a7"
-            alt="maps"
-            class="map-placeholder"
-          />
+          <div class="info-item">
+            <strong>Experience:</strong><br />
+            6+ years
+          </div>
+          <div class="info-item">
+            <strong>Strength:</strong><br />
+            Hygiene & Sanitation
+          </div>
+          <div class="info-item">
+            <strong>Most Trusted Tool:</strong><br />
+            Disinfectant Sprayer
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -126,6 +132,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warung Nusantara</title>
+    <title>Menu</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -36,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto nav-menu">
             <li class="nav-item">
-              <a href="../HomePage/index.html" class="nav-link">Home</a>
+              <a href="../HomePage/index.html" class="nav-link actived">Home</a>
             </li>
             <li class="nav-item">
-              <a href="../About/index.html" class="nav-link">About</a>
+              <a href="../About/index.html" class="nav-link"> About </a>
             </li>
             <li class="nav-item">
-              <a href="#location" class="nav-link actived">Location</a>
+              <a href="../Location/index.html" class="nav-link">Location</a>
             </li>
             <li class="nav-item">
               <a href="../Reviews/index.html" class="nav-link">Reviews</a>
@@ -60,38 +60,47 @@
       </div>
     </nav>
 
-    <!-- Location Section -->
-    <section id="location" class="location">
-      <div class="container">
-        <h2>Find Us</h2>
-        <div class="location-content">
-          <div class="location-info">
-            <h3>Our Location</h3>
-            <p>
-              📍 Jl. Merdeka No. 123<br />
-              Medan, North Sumatra 20111<br />
-              Indonesia
-            </p>
-            <p>
-              📞 Phone: +62 61 123-4567<br />
-              📧 Email: info@warungnusantara.com
-            </p>
-            <div class="hours">
-              <h4>Opening Hours</h4>
-              <p>Monday - Sunday: 10:00 AM - 10:00 PM</p>
-            </div>
+    <!-- Menu Detail -->
+    <div class="menu-container">
+      <img
+        src="https://media.istockphoto.com/id/1447839081/photo/gado-gado-traditional-indonesian-food.jpg?s=612x612&w=0&k=20&c=Cg5p3E-oiRYlf0AEacXmhaqlrC-NJJV0JGLRKsJSTqc="
+        alt="Gado-Gado"
+        class="menu-image"
+      />
+
+      <div class="menu-details">
+        <h1>Gado-Gado</h1>
+        <p>
+          Gado-Gado is a traditional Indonesian salad made from lightly boiled
+          or steamed vegetables, tofu, tempeh, and hard-boiled eggs. It is
+          served with a generous amount of rich, creamy peanut sauce and
+          garnished with crackers and fried shallots. This healthy and
+          satisfying dish offers a perfect balance of flavor and texture.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <strong>Ingredients:</strong><br />
+            Cabbage, spinach, bean sprouts, long beans, tofu, tempeh, boiled
+            egg, cucumber, peanut sauce, fried shallots, crackers
           </div>
-          <!-- <div class="map-placeholder">
-            <div class="map-placeholder-text">Interactive Map Placeholder</div>
-          </div> -->
-          <img
-            src="https://i.wpimg.pl/1280x/filerepo.grupawp.pl/api/v1/display/embed/eb2694f5-9bf5-487c-a918-79ce6d7246a7"
-            alt="maps"
-            class="map-placeholder"
-          />
+          <div class="info-item">
+            <strong>Serving Size:</strong><br />
+            1 portion (approx. 350g)
+          </div>
+          <div class="info-item">
+            <strong>Spice Level:</strong><br />
+            🌶️ Mild (adjustable with sambal)
+          </div>
+          <div class="info-item">
+            <strong>Calories:</strong><br />
+            Approx. 480 kcal
+          </div>
         </div>
+
+        <div class="price">Rp 28,000</div>
       </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -126,6 +135,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

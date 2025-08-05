@@ -275,6 +275,10 @@ h2::after {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+.dish-card a {
+  text-decoration: none;
+}
+
 .dish-image {
   width: 95%;
   height: 200px;
@@ -414,6 +418,10 @@ h2::after {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-member a {
+  text-decoration: none;
 }
 
 .member-photo {
