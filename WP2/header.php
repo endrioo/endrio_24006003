@@ -13,5 +13,9 @@ $basePath = $protocol . "://$host/endrio_24006003/WP2";
     <link rel="stylesheet" href="<?= $basePath ?>/css/style.css">
     <?php if ($first_segment === 'module5'): ?>
         <link rel="stylesheet" href="<?= $basePath ?>/css/styleModule5.css">
+    <?php elseif ($first_segment === 'module6'): ?>
+        <link rel="stylesheet" href="<?= $basePath ?>/css/styleModule6.css">
+        <link rel="stylesheet" href="<?= $basePath ?>/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?= $basePath ?>/css/dataTables.bootstrap5.min.css">
     <?php endif; ?>
 </head>

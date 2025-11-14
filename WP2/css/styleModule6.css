@@ -1,0 +1,97 @@
+body {
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+div.main h2 {
+  background-color: skyblue;
+  padding: 30px 35px;
+  margin: -10px -50px;
+  text-align: center;
+  color: #fff;
+}
+
+div.main span {
+  display: block;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.success {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+div.main b {
+  color: white;
+}
+
+div.main hr {
+  margin: 10px -50px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-bottom: 25px;
+}
+
+div.main {
+  background-color: white;
+  width: 370px;
+  padding: 10px 50px 30px;
+  border: 2px solid gray;
+  font-family: raleway;
+  margin-top: 15px;
+  margin-left: 370px;
+}
+
+div.main input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"] {
+  width: 96%;
+  height: 25px;
+  padding: 5px;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  color: #53bd84;
+  font-size: 16px;
+}
+
+div.main select {
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  color: #53bd84;
+  font-size: 16px;
+}
+
+div.main input[type="radio"] {
+  margin: 10px 10px 0 10px;
+}
+
+div.main label {
+  color: #53bd84;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+div.main input[type="submit"] {
+  font-size: 16px;
+  background: linear-gradient(skyblue 5%, #fff 100%);
+  color: #4e4d4b;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+}
