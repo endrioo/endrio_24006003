@@ -17,6 +17,13 @@ $resultProduct = mysqli_query($connection, $queryProduct);
 $dataProduct = mysqli_fetch_assoc($resultProduct);
 $jumlahProduct = $dataProduct['jumlahProduct'];
 
+// Query to calculate the number of orders data
+$queryOrder = "SELECT COUNT(*) as jumlahOrder FROM orders";
+$resultOrder = mysqli_query($connection, $queryOrder);
+$dataOrder = mysqli_fetch_assoc($resultOrder);
+$jumlahOrder = $dataOrder['jumlahOrder'];
+
+
 ?>
 <div class="container dashboard-box" style="padding-top: 30px">
     <div class="box">
@@ -39,24 +46,35 @@ $jumlahProduct = $dataProduct['jumlahProduct'];
             <div class="label">Total Products</div>
         </a>
     </div>
-    <div class="row" style="padding:55px">
-
-        <h1>Welcome <?php echo $_SESSION['nama_lengkap']; ?> on the Members page</h1>
-
-        <h3>Your profile details:</h3>
-        <ul>
-            <li><strong>ID Member:</strong> <?php echo $_SESSION['id_member']; ?></li>
-            <li><strong>Gender:</strong> <?php echo $_SESSION['gender']; ?></li>
-            <li><strong>Alamat:</strong> <?php echo $_SESSION['alamat']; ?></li>
-            <li><strong>Tanggal Lahir:</strong> <?php echo $_SESSION['tanggallahir']; ?></li>
-            <li><strong>Nomor Telepon:</strong> <?php echo $_SESSION['nomor_telepon']; ?></li>
-            <li><strong>Hobi:</strong> <?php echo $_SESSION['hobi']; ?></li>
-            <li><strong>Nama Orang Tua:</strong> <?php echo $_SESSION['nama_orang_tua']; ?></li>
-        </ul>
-
-        <p><a href="logout.php"><strong>LOGOUT</strong></a></p>
-
+    <div class="box">
+        <a href="orders/">
+            <div class="count">
+                <?php
+                    echo $jumlahOrder;
+                ?>
+            </div>
+            <div class="label">Total Orders</div>
+        </a>
     </div>
+</div>
+
+<div class="row" style="padding:55px">
+
+    <h1>Welcome <?php echo $_SESSION['nama_lengkap']; ?> on the Members page</h1>
+
+    <h3>Your profile details:</h3>
+    <ul>
+        <li><strong>ID Member:</strong> <?php echo $_SESSION['id_member']; ?></li>
+        <li><strong>Gender:</strong> <?php echo $_SESSION['gender']; ?></li>
+        <li><strong>Alamat:</strong> <?php echo $_SESSION['alamat']; ?></li>
+        <li><strong>Tanggal Lahir:</strong> <?php echo $_SESSION['tanggallahir']; ?></li>
+        <li><strong>Nomor Telepon:</strong> <?php echo $_SESSION['nomor_telepon']; ?></li>
+        <li><strong>Hobi:</strong> <?php echo $_SESSION['hobi']; ?></li>
+        <li><strong>Nama Orang Tua:</strong> <?php echo $_SESSION['nama_orang_tua']; ?></li>
+    </ul>
+
+    <p><a href="logout.php"><strong>LOGOUT</strong></a></p>
+
 </div>
 <?php
 include('../../footer.php')

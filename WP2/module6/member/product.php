@@ -39,8 +39,8 @@ include('header.php');
                      <div class="box">
                         <div class="option_container">
                            <div class="options">
-                              <a href="" class="option1">
-                              Add To Cart
+                              <a class="option1" onclick="addToCart(<?php echo $row['id_product']; ?>,1)">
+                                 Add To Cart
                               </a>
                               <a href="product_detail.php?id=<?php echo $row['id_product']?>" class="option2">
                                  View Detail

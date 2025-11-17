@@ -61,8 +61,8 @@ $product = mysqli_fetch_assoc($result);
                     <?= !empty($product['deskripsi_produk']) ? $product['deskripsi_produk'] : "No description available." ?>
                 </p>
 
-                <a href="#" class="btn btn-success" style="margin-top:20px;">
-                    Add to Cart
+                <a class="option1" onclick="addToCart(<?php echo $row['id_product']; ?>,1)">
+                    Add To Cart
                 </a>
 
                 <br><br>
